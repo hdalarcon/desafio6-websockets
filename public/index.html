@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Productos</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="/socket.io/socket.io.js"></script>
     <!--Bootswatch-->
     <link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.min.css">
@@ -42,6 +43,7 @@
 
             <hr>
             <div class="productos-ingresados"></div>
+                <h1>Productos</h1>
                 <table class="table">
                     <th>
                         <tr class="table-primary">
@@ -57,12 +59,19 @@
             <div class="formulario-mensajes">
                 <h1>Centro de mensajes</h1>
                 <form class="form" onsubmit="agregarMensaje(this)" autocomplete="off">
-                    <input type="email" id="email" placeholder="Ingresá tu email" required>
+                    <div class="form-group">
+                        <input type="email" id="email" class="form-control" placeholder="Ingresá tu email" required>
+                    </div>
+                    
                     <hr>
                     <div id="mensajes"></div>
                     <hr>
-                    <input type="text" id="texto" placeholder="Ingresa un mensajes" required>
-                    <input type="submit" value="Enviar">
+                    
+                    <div class="form-group">
+                        <input type="text" id="texto" class="form-control" placeholder="Ingresa un mensajes" required>
+                    </div>
+                    
+                    <input class="btn btn-success" type="submit" value="Enviar">
                 </form>
             </div>
 
@@ -70,7 +79,6 @@
 
         </div>
 
-        <hr>
         <script src="js/main.js"></script>
 </body>
 

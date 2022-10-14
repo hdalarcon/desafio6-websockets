@@ -39,8 +39,9 @@ function render(data){
     const date = new Date();
     const html = data.map((elem)=>{
         return `<div>
-                    <strong style="color:blue;">${elem.autor}</strong> <span style="color:brown";>${date.getDay()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}</span>:
-                    <em style="color:green;">${elem.mensaje}</em></div>`
+                    <strong style="color:blue;">${elem.autor}</strong> <span style="color:brown;">${date.toLocaleDateString()} ${date.getHours()}: ${date.getMinutes()}:${date.getSeconds()}</span>:
+                    <em style="color:green; font-style: italic;">${elem.mensaje}</em>
+                </div>`
     }).join(" ");
     document.getElementById('mensajes').innerHTML = html;
 }
